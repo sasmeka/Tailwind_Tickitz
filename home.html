@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/home_login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <header>
+            <div class="left">
+                <img class="logo2" src="img/logo2.png" alt="">
+            </div>
+            <div class="right">
+                <div class="header-bar">
+                    <a href="#">Home</a>
+                    <a href="list_movie.html">List Movie</a>
+                </div>
+                <div class="profile">
+                    <a onclick="show_search()"><i id="button_search" class="fa fa-search" aria-hidden="true"></i></a>
+                    <div class="search" id="search">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <a onclick="show_menu_dekstop()">
+                        <img class="profile" src="img/profile.png" alt="">
+                    </a>
+                </div>
+                <a onclick="show_menu()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+            </div>
+            <div class="nav-desktop" id="nav-desktop">
+                <a href="#" onclick="hidden_menu_dekstop()">Profile</a>
+                <a href="index.html">Logout</a>
+            </div>
+        </header>
+        <nav id="nav" onclick="hidden_menu()">
+            <div>
+                <div>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
+            <p><a class="nav-home" href="">Home</a></p>
+            <p><a href="list_movie.html">List Movie</a></p>
+            <p><a href="signin.html">Sign In</a></p>
+            <p><a href="index.html">Logout</a></p>
+            <p class="cop">&copy; 2020 Tickitz. All Rights Reerved.</p>
+        </nav>
+        <main>
+            <section class="content-1">
+                <div class="left">
+                    <p>Nearest Cinema, Newest Movie,</p>
+                    <h1>Find out now!</h1>
+                </div>
+                <div class="right">
+                    <img style="align-self: flex-end;filter: drop-shadow(5px 5px 5px #222);" src="img/home1.png" alt="">
+                    <img style="align-self: center; margin-left: 20px; margin-right: 20px;filter: drop-shadow(5px 5px 5px #222);"
+                        src="img/home2.png" alt="">
+                    <img style="align-self: flex-start;filter: drop-shadow(5px 5px 5px #222);" src="img/home3.png"
+                        alt="">
+                </div>
+            </section>
+            <section class="content-2">
+                <div class="top">
+                    <h2>Now Showing</h2>
+                    <a href="list_movie.html">view all</a>
+                </div>
+                <div class="bottom">
+                    <img class="img1" src="img/1.png" alt="" style="align-self: flex-start">
+                    <div class="card-movie m1" style="flex-shrink: 0">
+                        <img src="img/1.png" alt="">
+                        <div>
+                            <h5>Spider-Man</h5>
+                            <p>Adventure, Action, Sci-Fi</p>
+                            <a href="detail_movie.html"><button>Details</button></a>
+                        </div>
+                    </div>
+                    <img class="img2" src="img/2.png" alt="" style="align-self: flex-start">
+                    <div class="card-movie m2" style="flex-shrink: 0">
+                        <img src="img/2.png" alt="">
+                        <div>
+                            <h5>lion King</h5>
+                            <p>AdventureSci-Fi</p>
+                            <a href="detail_movie.html"><button>Details</button></a>
+                        </div>
+                    </div>
+                    <img class="img3" src="img/3.png" alt="" style="align-self: flex-start">
+                    <div class="card-movie m3" style="flex-shrink: 0">
+                        <img src="img/3.png" alt="">
+                        <div>
+                            <h5>John 3 Wick</h5>
+                            <p>Action, Sci-Fi</p>
+                            <a href="detail_movie.html"><button>Details</button></a>
+                        </div>
+                    </div>
+                    <img class="img4" src="img/4.png" alt="" style="align-self: flex-start">
+                    <div class="card-movie m4" style="flex-shrink: 0">
+                        <img src="img/4.png" alt="">
+                        <div>
+                            <h5>Black Widow</h5>
+                            <p>Adventure, Action, Sci-Fi</p>
+                            <a href="detail_movie.html"><button>Details</button></a>
+                        </div>
+                    </div>
+                    <img class="img5" src="img/5.png" alt="" style="align-self: flex-start">
+                    <div class="card-movie m5" style="flex-shrink: 0">
+                        <img src="img/5.png" alt="">
+                        <div>
+                            <h5>The Witches</h5>
+                            <p>Adventure, Action, Sci-Fi</p>
+                            <a href="detail_movie.html"><button>Details</button></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content-3">
+                <div class="top">
+                    <a href="#">Home</a>
+                    <a href="list_movie.html">List Movie</a>
+                </div>
+                <div class="mid">
+                    <button class="cal1">September</button>
+                    <button class="cal2">October</button>
+                    <button class="cal3">November</button>
+                    <button class="cal4">December</button>
+                    <button class="cal5">January</button>
+                    <button class="cal6">February</button>
+                    <button class="cal7">March</button>
+                    <button class="cal8">April</button>
+                </div>
+                <div class="bottom">
+                    <div class="card-movie m2">
+                        <img src="img/1.png" alt="">
+                        <div>
+                            <h5>Spider-Man</h5>
+                            <p>Adventure, Action, Sci-Fi</p>
+                            <a href="detail_movie.html"><button>Details</button></a>
+                        </div>
+                    </div>
+                    <div class="card-movie m2">
+                        <img src="img/2.png" alt="">
+                        <div>
+                            <h5>lion King</h5>
+                            <p>AdventureSci-Fi</p>
+                            <a href="detail_movie.html"><button>Details</button></a>
+                        </div>
+                    </div>
+                    <div class="card-movie m3">
+                        <img src="img/3.png" alt="">
+                        <div>
+                            <h5>John 3 Wick</h5>
+                            <p>Action, Sci-Fi</p>
+                            <a href="detail_movie.html"><button>Details</button></a>
+                        </div>
+                    </div>
+                    <div class="card-movie m4">
+                        <img src="img/4.png" alt="">
+                        <div>
+                            <h5>Black Widow</h5>
+                            <p>Adventure, Action, Sci-Fi</p>
+                            <a href="detail_movie.html"><button>Details</button></a>
+                        </div>
+                    </div>
+                    <div class="card-movie m5">
+                        <img src="img/5.png" alt="">
+                        <div>
+                            <h5>The Witches</h5>
+                            <p>Adventure, Action, Sci-Fi</p>
+                            <a href="detail_movie.html"><button>Details</button></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content-4">
+                <div class="card">
+                    <div class="top">
+                        <p>Be the vanguard of the</p>
+                        <h1>Moviegoers</h1>
+                    </div>
+                    <div class="mid">
+                        <input type="text" placeholder="Type your email"><button>Join now</button>
+                    </div>
+                    <div class="bottom">
+                        <p>By joining you as a Tickitz member,<br>we will always send you the lastes update via email.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="information">
+                <div class="footer-item1">
+                    <img class="logo2" src="img/logo2.png" alt="">
+                    <p>Stop waiting in line. Buy tickets conveniently, watch movies quietly.</p>
+                </div>
+                <div class="footer-item2">
+                    <p class="title">Explore</p>
+                    <div>
+                        <p><a href="index.html">Home</a></p>
+                        <p><a href="">List Movie</a></p>
+                    </div>
+                </div>
+                <div class="footer-item3">
+                    <p class="title">our Sponsor</p>
+                    <div>
+                        <img class="ebu-logo" src="img/ebu.id-logo.png" alt="">
+                        <img class="cine-logo" src="img/cineone21-logo.png" alt="">
+                        <img class="hiflix" src="img/hiflix-logo.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-item4">
+                    <p class="title">Follow us</p>
+                    <div>
+                        <div>
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                            <a href="">Tickitz Cinema id</a>
+                        </div>
+                        <div>
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                            <a href="">tickitz.id</a>
+                        </div>
+                        <div>
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                            <a href="">tickitz.id</a>
+                        </div>
+                        <div>
+                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                            <a href="">Tickitz Cinema id</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">&copy; 2020 Tickitz. All Rights Reerved.</div>
+        </footer>
+    </div>
+</body>
+<script>
+    function show_menu_dekstop() {
+        document.getElementById("search").style.display = "none";
+        document.getElementById("button_search").style.display = "block";
+        document.getElementById("nav-desktop").style.display = "flex";
+    }
+    function hidden_menu_dekstop() {
+        document.getElementById("nav-desktop").style.display = "none";
+    }
+    function show_search() {
+        document.getElementById("search").style.display = "block";
+        document.getElementById("button_search").style.display = "none";
+    }
+    function hidden_menu() {
+        document.getElementById("nav").style.display = "none";
+    }
+    function show_menu() {
+        document.getElementById("nav").style.display = "flex";
+    }
+</script>
+
+</html>

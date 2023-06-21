@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/detail_movie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <header>
+            <div class="left">
+                <img class="logo2" src="img/logo2.png" alt="">
+            </div>
+            <div class="right">
+                <div class="header-bar">
+                    <a href="home.html">Home</a>
+                    <a href="list_movie.html">List Movie</a>
+                </div>
+                <div class="profile">
+                    <a onclick="show_search()"><i id="button_search" class="fa fa-search" aria-hidden="true"></i></a>
+                    <div class="search" id="search">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <a onclick="show_menu_dekstop()">
+                        <img class="profile" src="img/profile.png" alt="">
+                    </a>
+                </div>
+                <a onclick="show_menu()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+            </div>
+            <div class="nav-desktop" id="nav-desktop">
+                <a href="#" onclick="hidden_menu_dekstop()">Profile</a>
+                <a href="index.html">Logout</a>
+            </div>
+        </header>
+        <nav id="nav" onclick="hidden_menu()">
+            <div>
+                <div>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
+            <p><a class="nav-home" href="home.html">Home</a></p>
+            <p><a href="list_movie.html">List Movie</a></p>
+            <p><a href="signin.html">Sign In</a></p>
+            <p><a href="index.html">Logout</a></p>
+            <p class="cop">&copy; 2020 Tickitz. All Rights Reerved.</p>
+        </nav>
+        <main>
+            <section class="content-1">
+                <img class="img1" src="img/1.png" alt="">
+                <div class="information_movie">
+                    <div class="title">
+                        <h1>Spider-man: Homecoming</h1>
+                        <p>Adventure, Action, Sci-Fi</p>
+                    </div>
+                    <div class="information_details">
+                        <div class="left">
+                            <div class="release">
+                                <h6>Release date</h6>
+                                <p>June 28, 2017</p>
+                            </div>
+                            <div class="duration">
+                                <h6>Duration</h6>
+                                <p>2 Hours 13 minutes</p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="director">
+                                <h6>Directed by</h6>
+                                <p>Jon Watss</p>
+                            </div>
+                            <div class="casts">
+                                <h6>Casts</h6>
+                                <p>Tom Holland, Michael Keaton, Robert Downey Jr., ...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="synopsis">
+                        <h5>Synopsis</h5>
+                        <p>Thrilled by his experience with the Avengers, Peter returns home, where he lives with his
+                            Aunt May, under the watchful eye of his new mentor Tony Stark, Peter tries to fall back into
+                            his normal daily routine - distracted by thoughts of proving himself to be more than just
+                            your friendly neighborhood Spider-Man - but when the Vulture emerges as a new villain,
+                            everything that Peter holds most important will be threatened. </p>
+                    </div>
+                </div>
+            </section>
+            <section class="content-2">
+                <h1>Showtimes and Tickes</h1>
+                <div class="search">
+                    <div>
+                        <div class="date">
+                            <i class="fa fa-calendar left" aria-hidden="true"></i>
+                            <select name="" id="">
+                                <option value="">21/07/20</option>
+                            </select>
+                            <i class="fa fa-sort-desc right" aria-hidden="true"></i>
+                        </div>
+                        <div class="location">
+                            <i class="fa fa-map-marker left" aria-hidden="true"></i>
+                            <select name="" id="">
+                                <option value="">Purwokerto</option>
+                            </select>
+                            <i class="fa fa-sort-desc right" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_ticket">
+                    <div class="card t1">
+                        <div class="top">
+                            <div class="img-card">
+                                <img class="ebu-logo" src="img/ebu.id-logo.png" alt="">
+                            </div>
+                            <div>
+                                <h1>ebv.id</h1>
+                                <p>Whatever street No.12, South Purwokerto</p>
+                            </div>
+                        </div>
+                        <div class="time">
+                            <p>08:30am</p>
+                            <p>10:30pm</p>
+                            <p class="disable">12:00pm</p>
+                            <p>02:00pm</p>
+                            <p>04:30pm</p>
+                            <p class="disable">07:00pm</p>
+                            <p>08:30pm</p>
+                        </div>
+                        <div class="price">
+                            <h1>Price</h1>
+                            <p>$10.00/seat</p>
+                        </div>
+                        <button>Book now</button>
+                    </div>
+                    <div class="card t2">
+                        <div class="top">
+                            <div class="img-card">
+                                <img class="cine-logo" src="img/cineone21-logo.png" alt="">
+                            </div>
+                            <div>
+                                <h1>CineOne21</h1>
+                                <p>Downcare street No.21, East Purwokerto</p>
+                            </div>
+                        </div>
+                        <div class="time">
+                            <p class="disable">08:30am</p>
+                            <p>10:00pm</p>
+                            <p>12:00pm</p>
+                            <p>02:00pm</p>
+                            <p>04:00pm</p>
+                            <p>06:00pm</p>
+                            <p class="disable">08:00pm</p>
+                        </div>
+                        <div class="price">
+                            <h1>Price</h1>
+                            <p>$10.00/seat</p>
+                        </div>
+                        <button>Book now</button>
+                    </div>
+                    <div class="card t3">
+                        <div class="top">
+                            <div class="img-card">
+                                <img class="hiflix" src="img/hiflix-logo.png" alt="">
+                            </div>
+                            <div>
+                                <h1>hiflix Cinema</h1>
+                                <p>Colonel street No. 2, East Purwokerto</p>
+                            </div>
+                        </div>
+                        <div class="time">
+                            <p>08:30am</p>
+                            <p>10:00pm</p>
+                            <p>12:00pm</p>
+                            <p class="disable">02:00pm</p>
+                            <p>04:00pm</p>
+                            <p class="disable">06:00pm</p>
+                            <p>08:30pm</p>
+                        </div>
+                        <div class="price">
+                            <h1>Price</h1>
+                            <p>$10.00/seat</p>
+                        </div>
+                        <button>Book now</button>
+                    </div>
+                    <div class="card t4">
+                        <div class="top">
+                            <div class="img-card">
+                                <img class="ebu-logo" src="img/ebu.id-logo.png" alt="">
+                            </div>
+                            <div>
+                                <h1>ebv.id</h1>
+                                <p>Whatever street No.12, South Purwokerto</p>
+                            </div>
+                        </div>
+                        <div class="time">
+                            <p>08:30am</p>
+                            <p>10:00pm</p>
+                            <p class="disable">12:00pm</p>
+                            <p>02:00pm</p>
+                            <p>04:00pm</p>
+                            <p class="disable">06:00pm</p>
+                            <p>08:00pm</p>
+                        </div>
+                        <div class="price">
+                            <h1>Price</h1>
+                            <p>$10.00/seat</p>
+                        </div>
+                        <button>Book now</button>
+                    </div>
+                    <div class="card t5">
+                        <div class="top">
+                            <div class="img-card">
+                                <img class="cine-logo" src="img/cineone21-logo.png" alt="">
+                            </div>
+                            <div>
+                                <h1>CineOne21</h1>
+                                <p>Downcare street No.21, East Purwokerto</p>
+                            </div>
+                        </div>
+                        <div class="time">
+                            <p class="disable">08:30am</p>
+                            <p>10:00pm</p>
+                            <p>12:00pm</p>
+                            <p>02:00pm</p>
+                            <p>04:00pm</p>
+                            <p>06:00pm</p>
+                            <p class="disable">08:00pm</p>
+                        </div>
+                        <div class="price">
+                            <h1>Price</h1>
+                            <p>$10.00/seat</p>
+                        </div>
+                        <button>Book now</button>
+                    </div>
+                    <div class="card t6">
+                        <div class="top">
+                            <div class="img-card">
+                                <img class="hiflix" src="img/hiflix-logo.png" alt="">
+                            </div>
+                            <div>
+                                <h1>hiflix Cinema</h1>
+                                <p>Colonel street No. 2, East Purwokerto</p>
+                            </div>
+                        </div>
+                        <div class="time">
+                            <p>08:30am</p>
+                            <p>10:00am</p>
+                            <p>12:00pm</p>
+                            <p class="disable">02:00pm</p>
+                            <p>04:00pm</p>
+                            <p class="disable">06:00pm</p>
+                            <p>08:00pm</p>
+                        </div>
+                        <div class="price">
+                            <h1>Price</h1>
+                            <p>$10.00/seat</p>
+                        </div>
+                        <button>Book now</button>
+                    </div>
+                </div>
+            </section>
+            <section class="view-more">
+                <h2><span><a href="">view more</a></span></h2>
+            </section>
+        </main>
+        <footer>
+            <div class="information">
+                <div class="footer-item1">
+                    <img class="logo2" src="img/logo2.png" alt="">
+                    <p>Stop waiting in line. Buy tickets conveniently, watch movies quietly.</p>
+                </div>
+                <div class="footer-item2">
+                    <p class="title">Explore</p>
+                    <div>
+                        <p><a href="index.html">Home</a></p>
+                        <p><a href="">List Movie</a></p>
+                    </div>
+                </div>
+                <div class="footer-item3">
+                    <p class="title">our Sponsor</p>
+                    <div>
+                        <img class="ebu-logo" src="img/ebu.id-logo.png" alt="">
+                        <img class="cine-logo" src="img/cineone21-logo.png" alt="">
+                        <img class="hiflix" src="img/hiflix-logo.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-item4">
+                    <p class="title">Follow us</p>
+                    <div>
+                        <div>
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                            <a href="">Tickitz Cinema id</a>
+                        </div>
+                        <div>
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                            <a href="">tickitz.id</a>
+                        </div>
+                        <div>
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                            <a href="">tickitz.id</a>
+                        </div>
+                        <div>
+                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                            <a href="">Tickitz Cinema id</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">&copy; 2020 Tickitz. All Rights Reerved.</div>
+        </footer>
+    </div>
+</body>
+<script>
+    function show_menu_dekstop() {
+        document.getElementById("search").style.display = "none";
+        document.getElementById("button_search").style.display = "block";
+        document.getElementById("nav-desktop").style.display = "flex";
+    }
+    function hidden_menu_dekstop() {
+        document.getElementById("nav-desktop").style.display = "none";
+    }
+    function show_search() {
+        document.getElementById("search").style.display = "block";
+        document.getElementById("button_search").style.display = "none";
+    }
+    function hidden_menu() {
+        document.getElementById("nav").style.display = "none";
+    }
+    function show_menu() {
+        document.getElementById("nav").style.display = "flex";
+    }
+</script>
+
+</html>
