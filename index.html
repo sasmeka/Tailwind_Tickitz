@@ -20,191 +20,234 @@
 </head>
 
 <body>
-    <div class="container mx-auto lg:px-16 flex flex-col">
-        <header class="flex justify-between pt-5">
-            <nav class="flex items-center">
-                <img class="lg:h-14 lg:pe-10" src="assets/img/logo2.png" alt="">
-                <a class="lg:px-7 text-[#414141] text-base" href="#">Home</a>
-                <a class="lg:px-7 text-[#414141] text-base" href="#">List Movie</a>
-            </nav>
-            <div class="flex items-center">
-                <a class="lg:pe-8"><i id="button_search" class="fa fa-search text-[#414141]" aria-hidden="true"></i></a>
-                <a>
-                    <img class="h-10 rounded-full" src="assets/img/profile.png" alt="">
-                </a>
+    <header class="sticky top-0 px-8 md:px-20 relative flex justify-between py-4 bg-white">
+        <nav class="flex items-center">
+            <img class="h-8 md:h-10 lg:h-14 pe-10" src="assets/img/logo2.png" alt="">
+            <a class="hidden lg:block text-[#414141] text-base font-normal hover:font-bold tracking-wide"
+                href="#">Home</a>
+            <a class="hidden lg:block px-7 text-[#414141] text-base font-normal hover:font-bold tracking-wide"
+                href="#">List
+                Movie</a>
+        </nav>
+        <div class="flex items-center">
+            <a class="hidden lg:block pe-8"><i id="button_search" class="fa fa-search text-[#414141]"
+                    aria-hidden="true"></i></a>
+            <a class="hidden lg:block" onclick="show_menu_desktop()">
+                <img class="h-10 rounded-full" src="assets/img/profile.png" alt="">
+            </a>
+            <a class="block lg:hidden" onclick="show_menu_mobile()"><i class="fa fa-bars" style="max-width: 200px;"
+                    aria-hidden="true"></i></a>
+        </div>
+        <div id="menu-desktop" class="hidden">
+            <a class="tracking-wide font-normal hover:font-bold" href="#" onclick="hidden_menu_desktop()">Profile</a>
+            <a class="tracking-wide font-normal hover:font-bold" href="index.html">Logout</a>
+        </div>
+        <div class="hidden" id="menu-mobile" onclick="hidden_menu_mobile()">
+            <div class="flex bg-white justify-around pb-4">
+                <div class="relative w-4/5">
+                    <i class="fa fa-search absolute top-3 left-4 text-[#6E7191]" aria-hidden="true"></i>
+                    <input type="text" class="h-10 w-full border rounded placeholder: pl-10" placeholder="Search...">
+                </div>
             </div>
-        </header>
-        <main>
-            <section>
+            <p class="bg-white border-t border-b py-3 tracking-wide text-sm md:text-base hover:font-bold"><a
+                    href="">Home</a></p>
+            <p class="bg-white border-b py-3 tracking-wide text-sm md:text-base hover:font-bold"><a
+                    href="list_movie.html">List
+                    Movie</a></p>
+            <p class="bg-white border-b py-3 tracking-wide text-sm md:text-base hover:font-bold"><a
+                    href="signin.html">Sign In</a></p>
+            <p class="bg-white border-b py-3 tracking-wide text-sm md:text-base hover:font-bold"><a
+                    href="index.html">Logout</a></p>
+            <p class="bg-white border-b py-3 tracking-wide text-sm md:text-base">&copy; 2020 Tickitz.
+                All Rights
+                Reerved.</p>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div>
+                <h2>List Movie</h2>
                 <div>
-                    <h2>List Movie</h2>
                     <div>
-                        <div>
-                            <select name="" id="">
-                                <option id="label" value="" disabled selected>Sort</option>
-                                <option value="">Title</option>
-                                <option value="">Release</option>
-                            </select>
-                            <i class="fa fa-sort-desc" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                            <input type="text" placeholder="Search...">
-                        </div>
+                        <select name="" id="">
+                            <option id="label" value="" disabled selected>Sort</option>
+                            <option value="">Title</option>
+                            <option value="">Release</option>
+                        </select>
+                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <input type="text" placeholder="Search...">
                     </div>
                 </div>
+            </div>
+            <div>
+                <button>September</button>
+                <button>October</button>
+                <button>November</button>
+                <button>December</button>
+                <button>January</button>
+                <button>February</button>
+                <button>March</button>
+                <button>April</button>
+            </div>
+        </section>
+        <section>
+            <div id="m1">
                 <div>
-                    <button>September</button>
-                    <button>October</button>
-                    <button>November</button>
-                    <button>December</button>
-                    <button>January</button>
-                    <button>February</button>
-                    <button>March</button>
-                    <button>April</button>
-                </div>
-            </section>
-            <section>
-                <div id="m1">
+                    <img src="assets/img/1.png" alt="">
                     <div>
-                        <img src="assets/img/1.png" alt="">
-                        <div>
-                            <h5>Spider-Man</h5>
-                            <p>Adventure, Action, Sci-Fi</p>
-                            <a href="detail_movie.html"><button>Details</button></a>
-                        </div>
+                        <h5>Spider-Man</h5>
+                        <p>Adventure, Action, Sci-Fi</p>
+                        <a href="detail_movie.html"><button>Details</button></a>
                     </div>
                 </div>
-                <div id="m2">
-                    <div>
-                        <img src="assets/img/1.png" alt="">
-                        <div>
-                            <h5>Spider-Man</h5>
-                            <p>Adventure, Action, Sci-Fi</p>
-                            <a href="detail_movie.html"><button>Details</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div id="m3">
-                    <div>
-                        <img src="assets/img/1.png" alt="">
-                        <div>
-                            <h5>Spider-Man</h5>
-                            <p>Adventure, Action, Sci-Fi</p>
-                            <a href="detail_movie.html"><button>Details</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div id="m4">
-                    <div>
-                        <img src="assets/img/1.png" alt="">
-                        <div>
-                            <h5>Spider-Man</h5>
-                            <p>Adventure, Action, Sci-Fi</p>
-                            <a href="detail_movie.html"><button>Details</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div id="m5">
-                    <div>
-                        <img src="assets/img/1.png" alt="">
-                        <div>
-                            <h5>Spider-Man</h5>
-                            <p>Adventure, Action, Sci-Fi</p>
-                            <a href="detail_movie.html"><button>Details</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div id="m6">
-                    <div>
-                        <img src="assets/img/1.png" alt="">
-                        <div>
-                            <h5>Spider-Man</h5>
-                            <p>Adventure, Action, Sci-Fi</p>
-                            <a href="detail_movie.html"><button>Details</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div id="m7">
-                    <div>
-                        <img src="assets/img/1.png" alt="">
-                        <div>
-                            <h5>Spider-Man</h5>
-                            <p>Adventure, Action, Sci-Fi</p>
-                            <a href="detail_movie.html"><button>Details</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div id="m8">
-                    <div>
-                        <img src="assets/img/1.png" alt="">
-                        <div>
-                            <h5>Spider-Man</h5>
-                            <p>Adventure, Action, Sci-Fi</p>
-                            <a href="detail_movie.html"><button>Details</button></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section>
+            </div>
+            <div id="m2">
                 <div>
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>4</button>
-                </div>
-            </section>
-        </main>
-        <footer class="flex flex-col">
-            <div class="flex justify-between">
-                <div class="basis-1/4">
-                    <img class="h-16 mb-3" src="assets/img/logo2.png" alt="">
-                    <p class="text-[#414141] text-base tracking-wide">Stop waiting in line. Buy tickets conveniently,
-                        watch movies
-                        quietly.</p>
-                </div>
-                <div>
-                    <p class="text-base font-bold mb-5">Explore</p>
-                    <div class="flex flex-col">
-                        <p class="my-1 text-[#4E4B66] text-sm tracking-wide"><a href="index.html">Home</a></p>
-                        <p class="my-1 text-[#4E4B66] text-sm tracking-wide"><a href="">List Movie</a></p>
-                    </div>
-                </div>
-                <div>
-                    <p class="text-base font-bold mb-5">our Sponsor</p>
-                    <div class="grid">
-                        <img class="h-7 my-2" src="assets/img/ebu.id-logo.png" alt="">
-                        <img class="h-7 my-2" src="assets/img/cineone21-logo.png" alt="">
-                        <img class="h-7 my-2" src="assets/img/hiflix-logo.png" alt="">
-                    </div>
-                </div>
-                <div>
-                    <p class="text-base font-bold mb-5">Follow us</p>
+                    <img src="assets/img/1.png" alt="">
                     <div>
-                        <div class="my-3">
-                            <i class="fa fa-facebook  box-content w-7 text-[#6E7192]" aria-hidden="true"></i>
-                            <a class="text-sm tracking-wide text-[#6E7192]" href="">Tickitz Cinema id</a>
-                        </div>
-                        <div class="my-3">
-                            <i class="fa fa-instagram box-content w-7 text-[#6E7192]" aria-hidden="true"></i>
-                            <a class="text-sm tracking-wide text-[#6E7192]" href="">tickitz.id</a>
-                        </div>
-                        <div class="my-3">
-                            <i class="fa fa-twitter  box-content w-7 text-[#6E7192]" aria-hidden="true"></i>
-                            <a class="text-sm tracking-wide text-[#6E7192]" href="">tickitz.id</a>
-                        </div>
-                        <div class="my-3">
-                            <i class="fa fa-youtube-play  box-content w-7 text-[#6E7192]" aria-hidden="true"></i>
-                            <a class="text-sm tracking-wide text-[#6E7192]" href="">Tickitz Cinema id</a>
-                        </div>
+                        <h5>Spider-Man</h5>
+                        <p>Adventure, Action, Sci-Fi</p>
+                        <a href="detail_movie.html"><button>Details</button></a>
+                    </div>
+                </div>
+            </div>
+            <div id="m3">
+                <div>
+                    <img src="assets/img/1.png" alt="">
+                    <div>
+                        <h5>Spider-Man</h5>
+                        <p>Adventure, Action, Sci-Fi</p>
+                        <a href="detail_movie.html"><button>Details</button></a>
+                    </div>
+                </div>
+            </div>
+            <div id="m4">
+                <div>
+                    <img src="assets/img/1.png" alt="">
+                    <div>
+                        <h5>Spider-Man</h5>
+                        <p>Adventure, Action, Sci-Fi</p>
+                        <a href="detail_movie.html"><button>Details</button></a>
+                    </div>
+                </div>
+            </div>
+            <div id="m5">
+                <div>
+                    <img src="assets/img/1.png" alt="">
+                    <div>
+                        <h5>Spider-Man</h5>
+                        <p>Adventure, Action, Sci-Fi</p>
+                        <a href="detail_movie.html"><button>Details</button></a>
+                    </div>
+                </div>
+            </div>
+            <div id="m6">
+                <div>
+                    <img src="assets/img/1.png" alt="">
+                    <div>
+                        <h5>Spider-Man</h5>
+                        <p>Adventure, Action, Sci-Fi</p>
+                        <a href="detail_movie.html"><button>Details</button></a>
+                    </div>
+                </div>
+            </div>
+            <div id="m7">
+                <div>
+                    <img src="assets/img/1.png" alt="">
+                    <div>
+                        <h5>Spider-Man</h5>
+                        <p>Adventure, Action, Sci-Fi</p>
+                        <a href="detail_movie.html"><button>Details</button></a>
+                    </div>
+                </div>
+            </div>
+            <div id="m8">
+                <div>
+                    <img src="assets/img/1.png" alt="">
+                    <div>
+                        <h5>Spider-Man</h5>
+                        <p>Adventure, Action, Sci-Fi</p>
+                        <a href="detail_movie.html"><button>Details</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+            </div>
+        </section>
+    </main>
+    <footer class="px-8 md:px-20 flex flex-col">
+        <div class="flex flex-wrap flex-col md:flex-row justify-between">
+            <div class="basis-1/4">
+                <img class="h-16 mb-3" src="assets/img/logo2.png" alt="">
+                <p class="text-[#414141] text-base tracking-wide">Stop waiting in line. Buy tickets conveniently,
+                    watch movies
+                    quietly.</p>
+            </div>
+            <div>
+                <p class="text-base font-bold mb-2 md:mb-5 mt-7 md:mt-0">Explore</p>
+                <div class="flex flex-row md:flex-col">
+                    <p class="my-1 text-[#4E4B66] text-sm tracking-wide me-4 md:me-0"><a href="index.html">Home</a></p>
+                    <p class="my-1 text-[#4E4B66] text-sm tracking-wide"><a href="">List Movie</a></p>
+                </div>
+            </div>
+            <div>
+                <p class="text-base font-bold mb-2 mb:mb-5 mt-5 md:mt-0">our Sponsor</p>
+                <div class="grid grid-flow-col auto-cols-max md:grid-flow-row md:auto-rows-max">
+                    <img class="h-4 md:h-7 me-4 my-2" src="assets/img/ebu.id-logo.png" alt="">
+                    <img class="h-4 md:h-7 me-4 my-2" src="assets/img/cineone21-logo.png" alt="">
+                    <img class="h-4 md:h-7 my-2" src="assets/img/hiflix-logo.png" alt="">
+                </div>
+            </div>
+            <div class="basis-auto">
+                <p class="text-base font-bold mb-2 mb:mb-5 mt-5 md:mt-0">Follow us</p>
+                <div class="flex flex-row md:flex-col">
+                    <div class="my-3 flex">
+                        <i class="fa fa-facebook  box-content w-7 text-[#6E7192] me-5 md:me-0" aria-hidden="true"></i>
+                        <a class="hidden md:block text-sm tracking-wide text-[#6E7192]" href="">Tickitz Cinema id</a>
+                    </div>
+                    <div class="my-3 flex">
+                        <i class="fa fa-instagram box-content w-7 text-[#6E7192] me-5 md:me-0" aria-hidden="true"></i>
+                        <a class="hidden md:block  text-sm tracking-wide text-[#6E7192]" href="">tickitz.id</a>
+                    </div>
+                    <div class="my-3 flex">
+                        <i class="fa fa-twitter  box-content w-7 text-[#6E7192] me-5 md:me-0" aria-hidden="true"></i>
+                        <a class="hidden md:block  text-sm tracking-wide text-[#6E7192]" href="">tickitz.id</a>
+                    </div>
+                    <div class="my-3 flex">
+                        <i class="fa fa-youtube-play  box-content w-7 text-[#6E7192] me-5 md:me-0"
+                            aria-hidden="true"></i>
+                        <a class="hidden md:block text-sm tracking-wide text-[#6E7192]" href="">Tickitz Cinema id</a>
+                    </div>
 
-                    </div>
                 </div>
             </div>
-            <div class="text-center mt-5 text-[#4E4B66] tracking-wide text-sm">&copy; 2020 Tickitz. All Rights Reerved.
-            </div>
-        </footer>
-    </div>
+        </div>
+        <div class="text-center mt-5 text-[#4E4B66] tracking-wide text-sm">&copy; 2020 Tickitz. All Rights Reerved.
+        </div>
+    </footer>
 </body>
+<script>
+    function show_menu_desktop() {
+        document.getElementById("menu-desktop").className = "hidden lg:grid absolute bg-white rounded shadow-md p-3 right-24 top-[4.5rem]";
+    }
+    function hidden_menu_desktop() {
+        document.getElementById("menu-desktop").className = "hidden";
+    }
+    function show_menu_mobile() {
+        document.getElementById("menu-mobile").className = "block lg:hidden absolute h-screen w-full left-0 bg-black bg-opacity-50 mt-[2.8rem] md:mt-[3.5rem] text-center";
+    }
+    function hidden_menu_mobile() {
+        document.getElementById("menu-mobile").className = "hidden";
+    }
+</script>
 
 </html>
