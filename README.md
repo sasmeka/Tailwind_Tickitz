@@ -108,5 +108,5 @@ Project Link: [https://github.com/sasmeka/Tailwind_Tickitz](https://github.com/s
 [linkedin-url]: https://www.linkedin.com/in/verdi-sasmeka-62b91b132/
 [html5.js]: https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white
 [html5-url]: https://developer.mozilla.org/en-US/docs/Glossary/HTML5
-[tailwind.js]: https://img.shields.io/badge/tailwind-#06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white
+[tailwind.js]: https://img.shields.io/badge/tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white
 [tailwind-url]: https://tailwindcss.com/
