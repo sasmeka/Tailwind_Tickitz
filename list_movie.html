@@ -20,29 +20,32 @@
 </head>
 
 <body>
-    <header class="sticky top-0 px-5 md:px-20 lg:px-36 relative flex justify-between py-4 bg-white">
+    <header class="sticky top-0 px-5 md:px-20 relative flex justify-between py-4 bg-white">
         <nav class="flex items-center">
             <img class="h-8 md:h-10 lg:h-14 pe-10" src="assets/img/logo2.png" alt="">
             <a class="hidden lg:block text-[#414141] text-base font-normal hover:font-bold tracking-wide"
                 href="index.html">Home</a>
             <a class="hidden lg:block px-7 text-[#414141] text-base font-normal hover:font-bold tracking-wide"
-                href="#">List
+                href="list_movie.html">List
                 Movie</a>
         </nav>
         <div class="flex items-center">
-            <a class="hidden lg:block pe-8"><iton_search" class="fa fa-search text-[#414141]"
-                    aria-hidden="true"></i></a>
+            <a class="hidden lg:block pe-8">
+                <iton_search" class="fa fa-search text-[#414141]" aria-hidden="true"></i>
+            </a>
             <a class="hidden lg:block" onclick="show_menu_desktop()">
                 <img class="h-10 rounded-full" src="assets/img/profile.png" alt="">
             </a>
             <a class="block lg:hidden" onclick="show_menu_mobile()"><i class="fa fa-bars" style="max-width: 200px;"
                     aria-hidden="true"></i></a>
         </div>
-        <divu-desktop" class="hidden">
-            <a class="tracking-wide font-normal hover:font-bold" href="#" onclick="hidden_menu_desktop()">Profile</a>
-            <a class="tracking-wide font-normal hover:font-bold" href="index.html">Logout</a>
+        <div id="menu-desktop" class="hidden">
+            <a class="tracking-wide font-normal hover:font-bold" href="profil.html"
+                onclick="hidden_menu_desktop()">Profile</a>
+            <a class="tracking-wide font-normal hover:font-bold" href="index.html"
+                onclick="hidden_menu_desktop()">Logout</a>
         </div>
-        <div class="hidden"u-mobile" onclick="hidden_menu_mobile()">
+        <div class="hidden" id="menu-mobile" onclick="hidden_menu_mobile()">
             <div class="flex bg-white justify-around pb-4">
                 <div class="relative w-4/5">
                     <i class="fa fa-search absolute top-3 left-4 text-[#6E7191]" aria-hidden="true"></i>
@@ -63,114 +66,161 @@
                 Reerved.</p>
         </div>
     </header>
-    <main class="px-5 md:px-20 lg:px-36 flex flex-col">
+    <main class="px-5 md:px-20 flex flex-col">
         <section class="flex flex-col py-7">
             <div class="flex flex-col md:flex-row md:justify-between md:items-center">
                 <h2 class="font-bold text-base lg:text-xl tracking-wide">List Movie</h2>
                 <div class="flex">
-                    <div class="relative w-28 pe-5 py-3 md:py-4">
-                        <select class="rounded-lg h-7 md:h-10 w-full pl-2 text-[#4E4B66] text-sm" name="">
+                    <div class="w-28 pe-5 py-3 md:py-4">
+                        <select class="z-0 rounded-lg h-7 md:h-10 w-full pl-2 text-[#4E4B66] text-sm" name="">
                             <option class="text-sm" value="" disabled selected>Sort</option>
                             <option value="">Title</option>
                             <option value="">Release</option>
                         </select>
                     </div>
-                    <div class="relative py-3 md:py-4">
-                        <input class="rounded-lg h-7 md:h-10 placeholder:pl-2 placeholder:text-[#4E4B66] placeholder:text-sm" type="text" placeholder="Search Movie Name . . .">
+                    <div class="py-3 md:py-4">
+                        <input
+                            class="z-0 rounded-lg h-7 md:h-10 placeholder:pl-2 placeholder:text-[#4E4B66] placeholder:text-sm"
+                            type="text" placeholder="Search Movie Name . . .">
                     </div>
                 </div>
             </div>
             <div class="flex justify-between overflow-x-hidden hover:overflow-x-scroll">
-                <div class="mr-8"><button class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">September</button></div>
-                <div class="mr-8"><button class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">October</button></div>
-                <div class="mr-8"><button class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">November</button></div>
-                <div class="mr-8"><button class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">December</button></div>
-                <div class="mr-8"><button class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">January</button></div>
-                <div class="mr-8"><button class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">February</button></div>
-                <div class="mr-8"><button class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">March</button></div>
-                <div class="mr-8"><button class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">April</button></div>
-                <div class="mr-8"><button class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">May</button></div>
-                <div class="mr-8"><button class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">June</button></div>
-                <div class="mr-8"><button class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">July</button></div>
-                <div class="mr-8"><button class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">Augustus</button></div>
+                <div class="mr-8"><button
+                        class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">September</button>
+                </div>
+                <div class="mr-8"><button
+                        class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">October</button>
+                </div>
+                <div class="mr-8"><button
+                        class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">November</button>
+                </div>
+                <div class="mr-8"><button
+                        class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">December</button>
+                </div>
+                <div class="mr-8"><button
+                        class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">January</button>
+                </div>
+                <div class="mr-8"><button
+                        class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">February</button>
+                </div>
+                <div class="mr-8"><button
+                        class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">March</button>
+                </div>
+                <div class="mr-8"><button
+                        class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">April</button>
+                </div>
+                <div class="mr-8"><button
+                        class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">May</button>
+                </div>
+                <div class="mr-8"><button
+                        class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">June</button>
+                </div>
+                <div class="mr-8"><button
+                        class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">July</button>
+                </div>
+                <div class="mr-8"><button
+                        class="h-8 w-32 rounded border border-[#5F2EEA] p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">Augustus</button>
+                </div>
             </div>
         </section>
-        <section class="flex flex-wrap md:pt-5 md:pt-10 px-2 md:px-5 items-center text-center justify-between md:justify-around lg:justify-between md:bg-white rounded-lg">
-                <div class="flex flex-col items-center p-2 md:p-5 border border-[#DEDEDE] mb-10 md:mx-10 rounded-lg bg-white">
-                    <img class="h-40" src="assets/img/1.png" alt="">
-                    <div class="md:mt-3">
-                        <h5 class="tracking-wide text-base font-semibold">Spider-Man</h5>
-                        <p class="my-1 text-[10px] text-[#A0A3BD]">Adventure, Action, Sci-Fi</p>
-                        <a href="detail_movie.html"><button class="mt-3 h-7 w-9/12 rounded border border-[#5F2EEA] text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">Details</button></a>
-                    </div>
+        <section
+            class="flex flex-wrap md:pt-5 md:pt-10 px-2 md:px-5 items-center text-center justify-between md:justify-around lg:justify-between md:bg-white rounded-lg">
+            <div
+                class="flex flex-col items-center p-2 md:p-5 border border-[#DEDEDE] mb-10 md:mx-10 rounded-lg bg-white">
+                <img class="h-40" src="assets/img/1.png" alt="">
+                <div class="md:mt-3">
+                    <h5 class="tracking-wide text-base font-semibold">Spider-Man</h5>
+                    <p class="my-1 text-[10px] text-[#A0A3BD]">Adventure, Action, Sci-Fi</p>
+                    <a href="detail_movie.html"><button
+                            class="mt-3 h-7 w-9/12 rounded border border-[#5F2EEA] text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">Details</button></a>
                 </div>
-                <div class="flex flex-col items-center p-2 md:p-5 border border-[#DEDEDE] mb-10 md:mx-10 rounded-lg bg-white">
-                    <img class="h-40" src="assets/img/1.png" alt="">
-                    <div class="md:mt-3">
-                        <h5 class="tracking-wide text-base font-semibold">Spider-Man</h5>
-                        <p class="my-1 text-[10px] text-[#A0A3BD]">Adventure, Action, Sci-Fi</p>
-                        <a href="detail_movie.html"><button class="mt-3 h-7 w-9/12 rounded border border-[#5F2EEA] text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">Details</button></a>
-                    </div>
+            </div>
+            <div
+                class="flex flex-col items-center p-2 md:p-5 border border-[#DEDEDE] mb-10 md:mx-10 rounded-lg bg-white">
+                <img class="h-40" src="assets/img/1.png" alt="">
+                <div class="md:mt-3">
+                    <h5 class="tracking-wide text-base font-semibold">Spider-Man</h5>
+                    <p class="my-1 text-[10px] text-[#A0A3BD]">Adventure, Action, Sci-Fi</p>
+                    <a href="detail_movie.html"><button
+                            class="mt-3 h-7 w-9/12 rounded border border-[#5F2EEA] text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">Details</button></a>
                 </div>
-                <div class="flex flex-col items-center p-2 md:p-5 border border-[#DEDEDE] mb-10 md:mx-10 rounded-lg bg-white">
-                    <img class="h-40" src="assets/img/1.png" alt="">
-                    <div class="md:mt-3">
-                        <h5 class="tracking-wide text-base font-semibold">Spider-Man</h5>
-                        <p class="my-1 text-[10px] text-[#A0A3BD]">Adventure, Action, Sci-Fi</p>
-                        <a href="detail_movie.html"><button class="mt-3 h-7 w-9/12 rounded border border-[#5F2EEA] text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">Details</button></a>
-                    </div>
+            </div>
+            <div
+                class="flex flex-col items-center p-2 md:p-5 border border-[#DEDEDE] mb-10 md:mx-10 rounded-lg bg-white">
+                <img class="h-40" src="assets/img/1.png" alt="">
+                <div class="md:mt-3">
+                    <h5 class="tracking-wide text-base font-semibold">Spider-Man</h5>
+                    <p class="my-1 text-[10px] text-[#A0A3BD]">Adventure, Action, Sci-Fi</p>
+                    <a href="detail_movie.html"><button
+                            class="mt-3 h-7 w-9/12 rounded border border-[#5F2EEA] text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">Details</button></a>
                 </div>
-                <div class="flex flex-col items-center p-2 md:p-5 border border-[#DEDEDE] mb-10 md:mx-10 rounded-lg bg-white">
-                    <img class="h-40" src="assets/img/1.png" alt="">
-                    <div class="md:mt-3">
-                        <h5 class="tracking-wide text-base font-semibold">Spider-Man</h5>
-                        <p class="my-1 text-[10px] text-[#A0A3BD]">Adventure, Action, Sci-Fi</p>
-                        <a href="detail_movie.html"><button class="mt-3 h-7 w-9/12 rounded border border-[#5F2EEA] text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">Details</button></a>
-                    </div>
+            </div>
+            <div
+                class="flex flex-col items-center p-2 md:p-5 border border-[#DEDEDE] mb-10 md:mx-10 rounded-lg bg-white">
+                <img class="h-40" src="assets/img/1.png" alt="">
+                <div class="md:mt-3">
+                    <h5 class="tracking-wide text-base font-semibold">Spider-Man</h5>
+                    <p class="my-1 text-[10px] text-[#A0A3BD]">Adventure, Action, Sci-Fi</p>
+                    <a href="detail_movie.html"><button
+                            class="mt-3 h-7 w-9/12 rounded border border-[#5F2EEA] text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">Details</button></a>
                 </div>
-                <div class="hidden md:flex flex-col items-center p-2 md:p-5 border border-[#DEDEDE] mb-10 md:mx-10 rounded-lg bg-white">
-                    <img class="h-40" src="assets/img/1.png" alt="">
-                    <div class="md:mt-3">
-                        <h5 class="tracking-wide text-base font-semibold">Spider-Man</h5>
-                        <p class="my-1 text-[10px] text-[#A0A3BD]">Adventure, Action, Sci-Fi</p>
-                        <a href="detail_movie.html"><button class="mt-3 h-7 w-9/12 rounded border border-[#5F2EEA] text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">Details</button></a>
-                    </div>
+            </div>
+            <div
+                class="hidden md:flex flex-col items-center p-2 md:p-5 border border-[#DEDEDE] mb-10 md:mx-10 rounded-lg bg-white">
+                <img class="h-40" src="assets/img/1.png" alt="">
+                <div class="md:mt-3">
+                    <h5 class="tracking-wide text-base font-semibold">Spider-Man</h5>
+                    <p class="my-1 text-[10px] text-[#A0A3BD]">Adventure, Action, Sci-Fi</p>
+                    <a href="detail_movie.html"><button
+                            class="mt-3 h-7 w-9/12 rounded border border-[#5F2EEA] text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">Details</button></a>
                 </div>
-                <div class="hidden md:flex flex-col items-center p-2 md:p-5 border border-[#DEDEDE] mb-10 md:mx-10 rounded-lg bg-white">
-                    <img class="h-40" src="assets/img/1.png" alt="">
-                    <div class="md:mt-3">
-                        <h5 class="tracking-wide text-base font-semibold">Spider-Man</h5>
-                        <p class="my-1 text-[10px] text-[#A0A3BD]">Adventure, Action, Sci-Fi</p>
-                        <a href="detail_movie.html"><button class="mt-3 h-7 w-9/12 rounded border border-[#5F2EEA] text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">Details</button></a>
-                    </div>
+            </div>
+            <div
+                class="hidden md:flex flex-col items-center p-2 md:p-5 border border-[#DEDEDE] mb-10 md:mx-10 rounded-lg bg-white">
+                <img class="h-40" src="assets/img/1.png" alt="">
+                <div class="md:mt-3">
+                    <h5 class="tracking-wide text-base font-semibold">Spider-Man</h5>
+                    <p class="my-1 text-[10px] text-[#A0A3BD]">Adventure, Action, Sci-Fi</p>
+                    <a href="detail_movie.html"><button
+                            class="mt-3 h-7 w-9/12 rounded border border-[#5F2EEA] text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">Details</button></a>
                 </div>
-                <div class="hidden md:flex flex-col items-center p-2 md:p-5 border border-[#DEDEDE] mb-10 md:mx-10 rounded-lg bg-white">
-                    <img class="h-40" src="assets/img/1.png" alt="">
-                    <div class="md:mt-3">
-                        <h5 class="tracking-wide text-base font-semibold">Spider-Man</h5>
-                        <p class="my-1 text-[10px] text-[#A0A3BD]">Adventure, Action, Sci-Fi</p>
-                        <a href="detail_movie.html"><button class="mt-3 h-7 w-9/12 rounded border border-[#5F2EEA] text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">Details</button></a>
-                    </div>
+            </div>
+            <div
+                class="hidden md:flex flex-col items-center p-2 md:p-5 border border-[#DEDEDE] mb-10 md:mx-10 rounded-lg bg-white">
+                <img class="h-40" src="assets/img/1.png" alt="">
+                <div class="md:mt-3">
+                    <h5 class="tracking-wide text-base font-semibold">Spider-Man</h5>
+                    <p class="my-1 text-[10px] text-[#A0A3BD]">Adventure, Action, Sci-Fi</p>
+                    <a href="detail_movie.html"><button
+                            class="mt-3 h-7 w-9/12 rounded border border-[#5F2EEA] text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">Details</button></a>
                 </div>
-                <div class="hidden md:flex flex-col items-center p-2 md:p-5 border border-[#DEDEDE] mb-10 md:mx-10 rounded-lg bg-white">
-                    <img class="h-40" src="assets/img/1.png" alt="">
-                    <div class="md:mt-3">
-                        <h5 class="tracking-wide text-base font-semibold">Spider-Man</h5>
-                        <p class="my-1 text-[10px] text-[#A0A3BD]">Adventure, Action, Sci-Fi</p>
-                        <a href="detail_movie.html"><button class="mt-3 h-7 w-9/12 rounded border border-[#5F2EEA] text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">Details</button></a>
-                    </div>
+            </div>
+            <div
+                class="hidden md:flex flex-col items-center p-2 md:p-5 border border-[#DEDEDE] mb-10 md:mx-10 rounded-lg bg-white">
+                <img class="h-40" src="assets/img/1.png" alt="">
+                <div class="md:mt-3">
+                    <h5 class="tracking-wide text-base font-semibold">Spider-Man</h5>
+                    <p class="my-1 text-[10px] text-[#A0A3BD]">Adventure, Action, Sci-Fi</p>
+                    <a href="detail_movie.html"><button
+                            class="mt-3 h-7 w-9/12 rounded border border-[#5F2EEA] text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">Details</button></a>
                 </div>
+            </div>
         </section>
         <section class="flex pb-10 mb:py-10 justify-around">
             <div class="flex w-40 justify-between">
-                <button class="bg-white w-8 rounded p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">1</button>
-                <button class="bg-white w-8 rounded p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">2</button>
-                <button class="bg-white w-8 rounded p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">3</button>
-                <button class="bg-white w-8 rounded p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">4</button>
+                <button
+                    class="bg-white w-8 rounded p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">1</button>
+                <button
+                    class="bg-white w-8 rounded p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">2</button>
+                <button
+                    class="bg-white w-8 rounded p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">3</button>
+                <button
+                    class="bg-white w-8 rounded p-2 text-[#5F2EEA] text-sm font-semibold leading-none hover:bg-[#5F2EEA] hover:text-white">4</button>
             </div>
         </section>
     </main>
-    <footer class="px-5 pt-5 md:px-20 lg:px-36 flex flex-col bg-white">
+    <footer class="px-5 pt-5 md:px-20 flex flex-col bg-white">
         <div class="flex flex-wrap flex-col md:flex-row justify-between">
             <div class="basis-1/4">
                 <img class="h-16 mb-3" src="assets/img/logo2.png" alt="">
@@ -223,7 +273,7 @@
 </body>
 <script>
     function show_menu_desktop() {
-        document.getElementById("menu-desktop").className = "hidden lg:grid absolute bg-white rounded shadow-md p-3 right-24 top-[4.5rem]";
+        document.getElementById("menu-desktop").className = "hidden lg:grid absolute bg-white rounded shadow-md p-3 right-40 top-[4.5rem] z-50";
     }
     function hidden_menu_desktop() {
         document.getElementById("menu-desktop").className = "hidden";
