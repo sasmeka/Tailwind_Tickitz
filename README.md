@@ -40,6 +40,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#screenshot">Usage</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -50,6 +51,11 @@
 ## About The Project
 
 This project creates a view of a Tickitz mockup using Tailwind Framework.
+The pages created in this project are:
+1. List movie
+2. Profile
+3. Order history
+4. Payment
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -89,6 +95,20 @@ After you clone, please open the index.html file to see the results.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- USAGE EXAMPLES -->
+## Screenshot
+
+1. List Movie
+[![Product Name Screen Shot][product-screenshot1]](https://example.com)
+2. Profile
+[![Product Name Screen Shot][product-screenshot2]](https://example.com)
+3. Order History
+[![Product Name Screen Shot][product-screenshot3]](https://example.com)
+4. Payment
+[![Product Name Screen Shot][product-screenshot4]](https://example.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- CONTACT -->
 ## Contact
 
@@ -110,3 +130,7 @@ Project Link: [https://github.com/sasmeka/Tailwind_Tickitz](https://github.com/s
 [html5-url]: https://developer.mozilla.org/en-US/docs/Glossary/HTML5
 [tailwind.js]: https://img.shields.io/badge/tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white
 [tailwind-url]: https://tailwindcss.com/
+[product-screenshot1]: assets/screenshot/list_movie.png
+[product-screenshot2]: assets/screenshot/profile.png
+[product-screenshot3]: assets/screenshot/order_history.png
+[product-screenshot4]: assets/screenshot/payment.png
