@@ -19,8 +19,8 @@
     </script>
 </head>
 
-<body>
-    <header class="sticky top-0 px-5 md:px-20 relative flex justify-between py-4 bg-white">
+<body class="relative">
+    <header class="sticky top-0 px-5 md:px-20 relative flex justify-between py-4 bg-white z-10">
         <nav class="flex items-center">
             <img class="h-8 md:h-10 lg:h-14 pe-10" src="assets/img/logo2.png" alt="">
             <a class="hidden lg:block text-[#414141] text-base font-normal hover:font-bold tracking-wide"
@@ -30,9 +30,13 @@
                 Movie</a>
         </nav>
         <div class="flex items-center">
-            <a class="hidden lg:block pe-8">
-                <iton_search" class="fa fa-search text-[#414141]" aria-hidden="true"></i>
+            <a id="icon-search" href="#" onclick="show_header_search()" class="hidden lg:block pe-8">
+                <i class="fa fa-search text-[#414141]" aria-hidden="true"></i>
             </a>
+            <div id="header-search" class="hidden">
+                <i class="fa fa-search text-[#6E7192] absolute left-2" aria-hidden="true"></i>
+                <input type="text" class="h-7 w-50 rounded-xl border pl-7" placeholder="Search . . .">
+            </div>
             <a class="hidden lg:block" onclick="show_menu_desktop()">
                 <img class="h-10 rounded-full" src="assets/img/profile.png" alt="">
             </a>
@@ -42,10 +46,26 @@
         <div id="menu-desktop" class="hidden">
             <a class="tracking-wide font-normal hover:font-bold" href="profil.html"
                 onclick="hidden_menu_desktop()">Profile</a>
-            <a class="tracking-wide font-normal hover:font-bold" href="index.html"
-                onclick="hidden_menu_desktop()">Logout</a>
+            <p><a class="tracking-wide font-normal hover:font-bold" href="#" onclick="show_modal_logout()">Logout</a>
+            </p>
         </div>
-        <div class="hidden" id="menu-mobile" onclick="hidden_menu_mobile()">
+        <div id="modal-logout" class="hidden">
+            <div class="bg-white p-5 rounded-lg">
+                <div class="flex pb-2 border-b justify-between items-center">
+                    <h1 class="tracking-wider font-bold">Logout</h1>
+                    <a href="#" onclick="hidden_modal_logout()"><i class="fa fa-times" aria-hidden="true"></i></a>
+                </div>
+                <div class="py-5">
+                    <p>Are you sure you want to logout?</p>
+                </div>
+                <div class="flex pt-2 border-t justify-between items-center">
+                    <a href="index.html"><button
+                            class="bg-[#dc2626] h-8 w-20 rounded-lg text-white font-bold text-sm">Log
+                            Out</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="hidden" id="menu-mobile">
             <div class="flex bg-white justify-around pb-4">
                 <div class="relative w-4/5">
                     <i class="fa fa-search absolute top-3 left-4 text-[#6E7191]" aria-hidden="true"></i>
@@ -53,15 +73,16 @@
                 </div>
             </div>
             <p class="bg-white border-t border-b py-3 tracking-wide text-sm md:text-base hover:font-bold"><a
-                    href="">Home</a></p>
+                    href="home.html" onclick="hidden_menu_mobile()">Home</a></p>
             <p class="bg-white border-b py-3 tracking-wide text-sm md:text-base hover:font-bold"><a
-                    href="list_movie.html">List
+                    href="list_movie.html" onclick="hidden_menu_mobile()">List
                     Movie</a></p>
-            <p class="bg-white border-b py-3 tracking-wide text-sm md:text-base hover:font-bold"><a
-                    href="signin.html">Sign In</a></p>
-            <p class="bg-white border-b py-3 tracking-wide text-sm md:text-base hover:font-bold"><a
-                    href="index.html">Logout</a></p>
-            <p class="bg-white border-b py-3 tracking-wide text-xs md:text-sm">&copy; 2020 Tickitz.
+            <p class="bg-white border-b py-3 tracking-wide text-sm md:text-base hover:font-bold"><a href="signin.html"
+                    onclick="hidden_menu_mobile()">Sign In</a></p>
+            <p class="bg-white border-b py-3 tracking-wide text-sm md:text-base hover:font-bold"><a href="#"
+                    onclick="show_modal_logout()">Logout</a></p>
+            <p onclick="hidden_menu_mobile()" class="bg-white border-b py-3 tracking-wide text-xs md:text-sm">&copy;
+                2020 Tickitz.
                 All Rights
                 Reerved.</p>
         </div>
@@ -77,8 +98,8 @@
                     <h5 class="text-base text-[#14142B] font-bold tracking-wider text-center">Verdi Sasmeka</h5>
                     <p class="text-xs tracking-wider text-center">Fazztrack</p>
                 </div>
-                <div class="flex justify-around mt-4"><button
-                        class="h-8 w-4/5 rounded-lg bg-[#5F2EEA] text-white tracking-wider text-xs">Logout</button>
+                <div class="flex justify-around mt-4" onclick="show_modal_logout()">
+                    <button class="h-8 w-4/5 rounded-lg bg-[#5F2EEA] text-white tracking-wider text-xs">Logout</button>
                 </div>
             </div>
         </section>
@@ -97,7 +118,7 @@
         </section>
         <section id="account-settings" class="col-span-2 md:col-span-3 flex flex-col md:my-5">
             <div
-                class="bg-white rounded-2xl md:rounded-xl grid gap-y-2 md:gap-x-5 md:grid-cols-2 md:grid-rows-[40px_1fr_1fr] px-5 py-8 mb-5 mx-5 md:mx-0 md:my-5 shadow-sm relative -z-10">
+                class="bg-white rounded-2xl md:rounded-xl grid gap-y-2 md:gap-x-5 md:grid-cols-2 md:grid-rows-[40px_1fr_1fr] px-5 py-8 mb-5 mx-5 md:mx-0 md:my-5 shadow-sm">
                 <div class="md:col-span-2 border-b text-sm font-bold tracking-wide pb-2 md:pb-0">Details Information
                 </div>
                 <div class="flex md:hidden flex-col mt-3">
@@ -130,7 +151,7 @@
                         <input
                             class="h-12 w-full rounded-xl border border-[#DEDEDE] placeholder:text-sm pl-14 text-[#4E4B66]"
                             type="text" placeholder="87734768584">
-                        <span class="absolute left-3 top-[0.9rem] text-sm text-[#4E4B66] pr-3 border-r ">+62</span>
+                        <span class="absolute left-3 top-[0.9rem] text-sm text-[#4E4B66] pr-3 border-r">+62</span>
                     </div>
                 </div>
             </div>
@@ -270,31 +291,58 @@
     </footer>
 </body>
 <script>
+    function show_header_search() {
+        document.getElementById("icon-search").className = "hidden";
+        document.getElementById("header-search").className = "relative pe-8 flex items-center";
+    }
     function show_menu_desktop() {
-        document.getElementById("menu-desktop").className = "hidden lg:grid absolute bg-white rounded shadow-md p-3 right-40 top-[4.5rem] z-50";
+        document.getElementById("icon-search").className = "hidden lg:block pe-8";
+        document.getElementById("header-search").className = "hidden";
+        document.getElementById("menu-desktop").className = "hidden lg:grid absolute bg-white rounded shadow-md p-3 right-24 top-[4.5rem]";
     }
     function hidden_menu_desktop() {
+        document.getElementById("icon-search").className = "hidden lg:block pe-8";
+        document.getElementById("header-search").className = "hidden";
         document.getElementById("menu-desktop").className = "hidden";
     }
     function show_menu_mobile() {
-        document.getElementById("menu-mobile").className = "block lg:hidden absolute h-screen w-full left-0 bg-black bg-opacity-50 mt-[2.8rem] md:mt-[3.5rem] text-center z-[2]";
+        document.getElementById("icon-search").className = "hidden lg:block pe-8";
+        document.getElementById("header-search").className = "hidden";
+        document.getElementById("menu-mobile").className = "block lg:hidden absolute h-screen w-full left-0 bg-black bg-opacity-50 mt-[2.8rem] md:mt-[3.5rem] text-center";
     }
     function hidden_menu_mobile() {
+        document.getElementById("icon-search").className = "hidden lg:block pe-8";
+        document.getElementById("header-search").className = "hidden";
         document.getElementById("menu-mobile").className = "hidden";
     }
+    function show_modal_logout() {
+        document.getElementById("icon-search").className = "hidden lg:block pe-8";
+        document.getElementById("header-search").className = "hidden";
+        document.getElementById("menu-mobile").className = "hidden";
+        document.getElementById("menu-desktop").className = "hidden";
+        document.getElementById("modal-logout").className = "block absolute h-screen w-full top-0 left-0 bg-black bg-opacity-50 text-center grid items-center justify-around";
+    }
+    function hidden_modal_logout() {
+        document.getElementById("icon-search").className = "hidden lg:block pe-8";
+        document.getElementById("header-search").className = "hidden";
+        document.getElementById("modal-logout").className = "hidden";
+    }
     function account_settings() {
+        document.getElementById("icon-search").className = "hidden lg:block pe-8";
+        document.getElementById("header-search").className = "hidden";
         document.getElementById("account-settings").className = "block col-span-2 md:col-span-3 flex flex-col md:my-5";
         document.getElementById("tab-as").className = "h-full ml-10 grid items-center border-[#5F2EEA] border-b-2 font-bold text-sm";
         document.getElementById("order-history").className = "hidden";
         document.getElementById("tab-oh").className = "h-full ml-10 grid items-center text-[#AAA] text-sm";
     }
     function order_history() {
+        document.getElementById("icon-search").className = "hidden lg:block pe-8";
+        document.getElementById("header-search").className = "hidden";
         document.getElementById("account-settings").className = "hidden";
         document.getElementById("tab-as").className = "h-full ml-10 grid items-center text-[#AAA] text-sm";
         document.getElementById("order-history").className = "block col-span-2 md:col-span-3 flex flex-col md:my-5";
         document.getElementById("tab-oh").className = "h-full ml-10 grid items-center border-[#5F2EEA] border-b-2 font-bold text-sm";
     }
-
 </script>
 
 </html>
