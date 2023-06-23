@@ -50,8 +50,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project creates a view of a Tickitz mockup using Tailwind Framework.
-The pages created in this project are:
+This project creates a view of a Tickitz mockup using Tailwind Framework. The pages created in this project are:
 1. List movie
 2. Profile
 3. Order history
