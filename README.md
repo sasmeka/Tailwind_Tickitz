@@ -65,6 +65,7 @@ This project creates a view of a Tickitz mockup using Tailwind Framework. The pa
 This project is based on :
 * [![html5][html5.js]][html5-url]
 * [![tailwind][tailwind.js]][tailwind-url]
+* [![javascript][javascript.js]][javascript-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -129,6 +130,8 @@ Project Link: [https://github.com/sasmeka/Tailwind_Tickitz](https://github.com/s
 [html5-url]: https://developer.mozilla.org/en-US/docs/Glossary/HTML5
 [tailwind.js]: https://img.shields.io/badge/tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white
 [tailwind-url]: https://tailwindcss.com/
+[javascript.js]: https://img.shields.io/badge/javascript-000000?style=for-the-badge&logo=javascript&logoColor=white
+[javascript-url]: https://www.javascript.com/
 [product-screenshot1]: assets/screenshot/list_movie.png
 [product-screenshot2]: assets/screenshot/profile.png
 [product-screenshot3]: assets/screenshot/order_history.png
